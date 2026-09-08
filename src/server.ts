@@ -1,5 +1,5 @@
 import http, {IncomingMessage, ServerResponse } from 'http';
-import {shoppingListRoute} from './routes/shoppingList.js'
+import {shoppingListRoute} from './routes/shoppingList.ts'
 
 
 const PORT = 3000; 
