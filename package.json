@@ -1,0 +1,29 @@
+{
+  "name": "task-1-node-ts-shopping-list-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec tsx src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SenseiTumelo/Task-1-Node-TS-Shopping-List-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/SenseiTumelo/Task-1-Node-TS-Shopping-List-API/issues"
+  },
+  "homepage": "https://github.com/SenseiTumelo/Task-1-Node-TS-Shopping-List-API#readme",
+  "dependencies": {
+    "@types/node": "^26.5.0",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
