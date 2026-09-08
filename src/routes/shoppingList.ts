@@ -1,10 +1,11 @@
 import { IncomingMessage, ServerResponse } from "http";
+import {getShoppingList, getListById, addShoppingList} from '../controllers/shoppingList.js'
 
 
 //http://localhost:3000/shoppingList
 
 export const shoppingListRoute = async (req:IncomingMessage, res: ServerResponse) => {
-    if(req.url?.startsWith('/shoppingList'){
+    if(req.url?.startsWith('/shoppingList')){
         console.log(req.url, 'request url');
 
         const parts = req.url.split("/");
@@ -17,5 +18,27 @@ export const shoppingListRoute = async (req:IncomingMessage, res: ServerResponse
             res.end(JSON.stringify(getShoppingList()));
             return;
         }
-    });
+
+        if(req.method === 'GET'  && id){
+            const shoppingList = getListById(id);
+            res.writeHead(shoppingList ? 200 : 404, {"content-type" : "application/json"});
+            res.end(JSON.stringify(shoppingList || {message: 'not found'}));
+            return;
+        }
+
+        if(req.method === 'POST'){
+            let body = "";
+            req.on("data", (chunk) => {
+                body += chunk.toString();
+                console.log(body, 'body');
+            });
+            req.on('end', ()=>{
+                const {name, color, userId} = JSON.parse(body);
+                const newShoppingList = addShoppingList(name, color, userId);
+                res.writeHead(201, {"content-type" : "application/jsopn"});
+                res.end(JSON.stringify(newShoppingList));
+                return;
+            });
+        }
+    };
 };
