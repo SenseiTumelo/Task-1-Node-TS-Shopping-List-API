@@ -3,12 +3,13 @@ export interface lists {
     userId: number,
     name: string,
     color: string,
+   /*
     item: {
         id: number,
         name: string,
-        category: [],
+        category: string,
         completed: boolean
-    }
+    }*/
 };
 
 export interface users {
