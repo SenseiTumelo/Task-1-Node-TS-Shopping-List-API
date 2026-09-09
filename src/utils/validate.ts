@@ -21,11 +21,19 @@ export function validateCreateInput(body: any): CreateItemInput {
     throw ApiError.badRequest("'purchased' must be a boolean.");
   }
 
-  return {
+  const result: CreateItemInput = {
     name: name.trim(),
-    quantity: quantity as number | undefined,
-    purchased: purchased as boolean | undefined,
   };
+
+  if (quantity !== undefined) {
+    result.quantity = quantity;
+  }
+
+  if (purchased !== undefined) {
+    result.purchased = purchased;
+  }
+
+  return result;
 }
 
 
@@ -52,9 +60,19 @@ export function validateUpdateInput(body: any): UpdateItemInput {
     throw ApiError.badRequest("'purchased' must be a boolean.");
   }
 
-  return {
-    name: name !== undefined ? name.trim() : undefined,
-    quantity: quantity as number | undefined,
-    purchased: purchased as boolean | undefined,
-  };
+  const result: UpdateItemInput = {};
+
+  if (name !== undefined) {
+    result.name = name.trim();
+  }
+
+  if (quantity !== undefined) {
+    result.quantity = quantity;
+  }
+
+  if (purchased !== undefined) {
+    result.purchased = purchased;
+  }
+
+  return result;
 }
