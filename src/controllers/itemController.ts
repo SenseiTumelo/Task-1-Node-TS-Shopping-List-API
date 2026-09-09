@@ -1,9 +1,9 @@
 import { IncomingMessage, ServerResponse } from "http";
 import { itemStore } from "../models/itemStore.js";
-import { sendSuccess } from "../utils/response";
-import { ApiError } from "../utils/ApiError";
-import { validateCreateInput, validateUpdateInput } from "../utils/validate";
-import { parseJsonBody } from "../utils/parseBody";
+import { sendSuccess } from "../utils/response.js";
+import { ApiError } from "../utils/ApiError.js";
+import { validateCreateInput, validateUpdateInput } from "../utils/validate.js";
+import { parseJsonBody } from "../utils/parseBody.js";
 
 // GET /items
 export function getAllItems(_req: IncomingMessage, res: ServerResponse): void {
