@@ -105,7 +105,7 @@ GET /items
 ### Get a single item
 
 ```http
-GET /api/items/:id
+GET /items/:id
 ```
 
 ### Create an item
