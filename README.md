@@ -99,7 +99,7 @@ The API is designed to manage shopping list items.
 ### Get all items
 
 ```http
-GET /api/items
+GET /items
 ```
 
 ### Get a single item
@@ -111,7 +111,7 @@ GET /api/items/:id
 ### Create an item
 
 ```http
-POST /api/items
+POST /items
 ```
 
 Request body example:
@@ -127,7 +127,7 @@ Request body example:
 ### Update an item
 
 ```http
-PUT /api/items/:id
+PUT items/:id
 ```
 
 Request body example:
@@ -143,7 +143,7 @@ Request body example:
 ### Delete an item
 
 ```http
-DELETE /api/items/:id
+DELETE items/:id
 ```
 
 ## Example Response
@@ -180,6 +180,3 @@ This project is a good starting point for learning:
 - CRUD operations
 - Environment configuration
 
-## License
-
-This project is provided for learning and development purposes.

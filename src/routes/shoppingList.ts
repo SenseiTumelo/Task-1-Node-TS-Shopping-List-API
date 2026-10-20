@@ -1,5 +1,5 @@
 import { IncomingMessage, ServerResponse } from "http";
-import {getShoppingList, getListById, addShoppingList} from '../controllers/shoppingList.js'
+import {getShoppingList, getListById, addShoppingList} from '../controllers/shoppingList'
 
 
 //http://localhost:3000/shoppingList
