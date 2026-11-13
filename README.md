@@ -52,6 +52,8 @@ Before running the project, make sure you have:
 
 ## Project Setup
 run `git clone https://github.com/SenseiTumelo/Task-1-Node-TS-Shopping-List-API.git` on your terminal
+
+
 then `cd Task-1-Node-TS-Shopping-List-API`
 
 
