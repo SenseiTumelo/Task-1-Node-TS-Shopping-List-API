@@ -1,3 +1,6 @@
+
+
+
 # Shopping List API
 
 A simple Node.js + TypeScript REST API for managing a shopping list.
@@ -46,6 +49,11 @@ Before running the project, make sure you have:
 
 - Node.js 18 or newer
 - npm 9 or newer
+
+## Project Setup
+run `git clone https://github.com/SenseiTumelo/Task-1-Node-TS-Shopping-List-API.git` on your terminal
+then `cd Task-1-Node-TS-Shopping-List-API`
+
 
 ## Installation
 
@@ -105,7 +113,7 @@ GET /items
 ### Get a single item
 
 ```http
-GET /api/items/:id
+GET /items/:id
 ```
 
 ### Create an item
